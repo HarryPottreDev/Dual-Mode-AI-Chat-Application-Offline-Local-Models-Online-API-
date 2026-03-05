@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.5"/>
+  <title>nicAi Chatbot</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <aside id="sidebar"> 
+    <div class="sidebar-top">
+      <button id="newChat" class="sidebar-btn">New Chat</button>
+    </div>
+    <div id="historyList" class="history-list"></div>
+    <button id="clearChat" class="sidebar-btn danger">Clear Current Chat</button>
+    <div id="theme-toggle">
+      <label>Light Mode</label>
+      <label class="toggle">
+        <input type="checkbox" id="lightModeSwitch">
+        <span class="slider"></span>
+      </label>
+    </div>
+    <div id="offline-toggle">
+      <label>Offline Mode</label>
+      <label class="toggle">
+        <input type="checkbox" id="offlineSwitch">
+        <span class="slider"></span>
+      </label>
+    </div>
+    <div class="form-group">
+      <input type="password" id="apiKey" class="input" placeholder="sk-… (optional)" />
+    </div>
+  </aside>
+  <main>
+    <div id="chat"></div>
+    <form id="chat-form" class="input-area">
+      <div class="input-row">
+        <button type="button" id="attachButton">Attach File</button>
+        <input type="text" id="message" placeholder="Ask something..." />
+        <button type="submit">Send</button>
+      </div>
+      <input type="file" id="fileInput" accept="image/*,video/*" hidden />
+      <div id="file-preview"></div>
+    </form>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
